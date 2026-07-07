@@ -11,13 +11,18 @@
     <div class="app-container">
         <h1>German Vocabulary</h1>
         
-        <!-- Category Selector -->
-        <div class="category-selector">
-            <select id="unit-select">
+<!-- Controls & Settings -->
+        <div class="settings-panel" style="display: flex; gap: 10px; margin-bottom: 20px; align-items: center; justify-content: center;">
+            <select id="unit-select" style="flex: 1;">
                 <option value="all">All Units</option>
-                <!-- The JavaScript will automatically add your categories here -->
+                <!-- JavaScript adds categories here -->
             </select>
+            
+            <label style="color: #e0e0e0; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; cursor: pointer;">
+                <input type="checkbox" id="reverse-mode"> Reverse Mode
+            </label>
         </div>
+        
         
         <div class="flashcard" id="card">
             <div class="front" id="card-front">
