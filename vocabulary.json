@@ -16,6 +16,24 @@
     { "word": "Fahrzeug", "article": "das", "plural": "Fahrzeuge", "english": "vehicle", "category": "Mobilität" },
     { "word": "Flugzeug", "article": "das", "plural": "Flugzeuge", "english": "airplane", "category": "Mobilität" },
     { "word": "Antrieb", "article": "der", "plural": "Antriebe", "english": "drive / propulsion", "category": "Mobilität" }
+  
+    { "word": "Gleichung", "article": "die", "plural": "Gleichungen", "english": "equation", "category": "Mathematik" },
+    { "word": "Matrix", "article": "die", "plural": "Matrizen", "english": "matrix", "category": "Mathematik" },
+    { "word": "Vektor", "article": "der", "plural": "Vektoren", "english": "vector", "category": "Mathematik" },
+    { "word": "Ableitung", "article": "die", "plural": "Ableitungen", "english": "derivative", "category": "Mathematik" },
+    { "word": "Integral", "article": "das", "plural": "Integrale", "english": "integral", "category": "Mathematik" },
+    { "word": "Winkel", "article": "der", "plural": "Winkel", "english": "angle", "category": "Mathematik" },
+    { "word": "Achse", "article": "die", "plural": "Achsen", "english": "axis", "category": "Mathematik" },
+    { "word": "Algorithmus", "article": "der", "plural": "Algorithmen", "english": "algorithm", "category": "Mathematik" },
+    { "word": "Querschnitt", "article": "der", "plural": "Querschnitte", "english": "cross-section", "category": "Mathematik" },
+    { "word": "Schwerpunkt", "article": "der", "plural": "Schwerpunkte", "english": "center of gravity / mass", "category": "Mathematik" },
+    { "word": "Variable", "article": "die", "plural": "Variablen", "english": "variable", "category": "Mathematik" },
+    { "word": "Koordinate", "article": "die", "plural": "Koordinaten", "english": "coordinate", "category": "Mathematik" },
+    { "word": "Bruch", "article": "der", "plural": "Brüche", "english": "fraction", "category": "Mathematik" },
+    { "word": "Radius", "article": "der", "plural": "Radien", "english": "radius", "category": "Mathematik" },
+    { "word": "Knoten", "article": "der", "plural": "Knoten", "english": "node / joint", "category": "Mathematik" }  
+    
+    
   ],
   "phrases": [
     { "german": "Ich möchte mich für den Masterstudiengang bewerben.", "english": "I would like to apply for the Master's program.", "category": "Studium" },
@@ -23,5 +41,11 @@
     { "german": "Das verteilte Drehmoment reicht von x=0 bis x=0.8.", "english": "The distributed torque goes from x=0 to x=0.8.", "category": "Technik & Physik" },
     { "german": "Wir müssen die genauen Maße berechnen.", "english": "We need to calculate the exact dimensions.", "category": "Technik & Physik" },
     { "german": "Gibt es hier in der Nähe ein gutes Restaurant?", "english": "Is there a good restaurant nearby?", "category": "Alltag" }
+
+    { "german": "Wir müssen die Gleichung nach x auflösen.", "english": "We need to solve the equation for x.", "category": "Mathematik" },
+    { "german": "Der Vektor zeigt in die positive y-Richtung.", "english": "The vector points in the positive y-direction.", "category": "Mathematik" },
+    { "german": "Setzen Sie die Werte in die Formel ein.", "english": "Plug the values into the formula.", "category": "Mathematik" },
+    { "german": "Wir müssen die Matrix invertieren.", "english": "We need to invert the matrix.", "category": "Mathematik" },
+    { "german": "Berechnen Sie die Summe aller Kräfte.", "english": "Calculate the sum of all forces.", "category": "Mathematik" }
   ]
 }
