@@ -15,7 +15,7 @@
     
     { "word": "Fahrzeug", "article": "das", "plural": "Fahrzeuge", "english": "vehicle", "category": "Mobilität" },
     { "word": "Flugzeug", "article": "das", "plural": "Flugzeuge", "english": "airplane", "category": "Mobilität" },
-    { "word": "Antrieb", "article": "der", "plural": "Antriebe", "english": "drive / propulsion", "category": "Mobilität" }
+    { "word": "Antrieb", "article": "der", "plural": "Antriebe", "english": "drive / propulsion", "category": "Mobilität" },
     
     { "word": "Gleichung", "article": "die", "plural": "Gleichungen", "english": "equation", "category": "Mathematik" },
     { "word": "Matrix", "article": "die", "plural": "Matrizen", "english": "matrix", "category": "Mathematik" },
@@ -31,7 +31,7 @@
     { "word": "Koordinate", "article": "die", "plural": "Koordinaten", "english": "coordinate", "category": "Mathematik" },
     { "word": "Bruch", "article": "der", "plural": "Brüche", "english": "fraction", "category": "Mathematik" },
     { "word": "Radius", "article": "der", "plural": "Radien", "english": "radius", "category": "Mathematik" },
-    { "word": "Knoten", "article": "der", "plural": "Knoten", "english": "node / joint", "category": "Mathematik" }  
+    { "word": "Knoten", "article": "der", "plural": "Knoten", "english": "node / joint", "category": "Mathematik" },  
     
     { "word": "Alltag", "article": "der", "plural": "Alltage", "english": "everyday life", "category": "Routine" },
     { "word": "Morgen", "article": "der", "plural": "Morgen", "english": "morning", "category": "Routine" },
@@ -72,7 +72,7 @@
     { "word": "Gewohnheit", "article": "die", "plural": "Gewohnheiten", "english": "habit", "category": "Routine" },
     { "word": "Verspätung", "article": "die", "plural": "Verspätungen", "english": "delay", "category": "Routine" },
     { "word": "Termin", "article": "der", "plural": "Termine", "english": "appointment", "category": "Routine" },
-    { "word": "Freizeit", "article": "die", "plural": "Freizeiten", "english": "free time", "category": "Routine" }
+    { "word": "Freizeit", "article": "die", "plural": "Freizeiten", "english": "free time", "category": "Routine" },
 
     { "word": "Bahnhof", "article": "der", "plural": "Bahnhöfe", "english": "train station", "category": "Transport & Navigation" },
     { "word": "Hauptbahnhof", "article": "der", "plural": "Hauptbahnhöfe", "english": "central station", "category": "Transport & Navigation" },
@@ -113,7 +113,7 @@
     { "word": "Karte", "article": "die", "plural": "Karten", "english": "map / ticket", "category": "Transport & Navigation" },
     { "word": "Ausweis", "article": "der", "plural": "Ausweise", "english": "ID card", "category": "Transport & Navigation" },
     { "word": "Pass", "article": "der", "plural": "Pässe", "english": "passport", "category": "Transport & Navigation" },
-    { "word": "Grenze", "article": "die", "plural": "Grenzen", "english": "border", "category": "Transport & Navigation" }
+    { "word": "Grenze", "article": "die", "plural": "Grenzen", "english": "border", "category": "Transport & Navigation" },
 
     { "word": "Supermarkt", "article": "der", "plural": "Supermärkte", "english": "supermarket", "category": "Einkaufen" },
     { "word": "Markt", "article": "der", "plural": "Märkte", "english": "market", "category": "Einkaufen" },
@@ -154,7 +154,7 @@
     { "word": "Obst", "article": "das", "plural": "-", "english": "fruit", "category": "Einkaufen" },
     { "word": "Gemüse", "article": "das", "plural": "-", "english": "vegetables", "category": "Einkaufen" },
     { "word": "Fleisch", "article": "das", "plural": "-", "english": "meat", "category": "Einkaufen" },
-    { "word": "Käse", "article": "der", "plural": "Käse", "english": "cheese", "category": "Einkaufen" }
+    { "word": "Käse", "article": "der", "plural": "Käse", "english": "cheese", "category": "Einkaufen" },
 
     
   ],
@@ -163,13 +163,13 @@
     { "german": "Die Kraft wirkt in die negative x-Richtung.", "english": "The force acts in the negative x-direction.", "category": "Technik & Physik" },
     { "german": "Das verteilte Drehmoment reicht von x=0 bis x=0.8.", "english": "The distributed torque goes from x=0 to x=0.8.", "category": "Technik & Physik" },
     { "german": "Wir müssen die genauen Maße berechnen.", "english": "We need to calculate the exact dimensions.", "category": "Technik & Physik" },
-    { "german": "Gibt es hier in der Nähe ein gutes Restaurant?", "english": "Is there a good restaurant nearby?", "category": "Alltag" }
+    { "german": "Gibt es hier in der Nähe ein gutes Restaurant?", "english": "Is there a good restaurant nearby?", "category": "Alltag" },
 
     { "german": "Wir müssen die Gleichung nach x auflösen.", "english": "We need to solve the equation for x.", "category": "Mathematik" },
     { "german": "Der Vektor zeigt in die positive y-Richtung.", "english": "The vector points in the positive y-direction.", "category": "Mathematik" },
     { "german": "Setzen Sie die Werte in die Formel ein.", "english": "Plug the values into the formula.", "category": "Mathematik" },
     { "german": "Wir müssen die Matrix invertieren.", "english": "We need to invert the matrix.", "category": "Mathematik" },
-    { "german": "Berechnen Sie die Summe aller Kräfte.", "english": "Calculate the sum of all forces.", "category": "Mathematik" }
+    { "german": "Berechnen Sie die Summe aller Kräfte.", "english": "Calculate the sum of all forces.", "category": "Mathematik" },
 
     { "german": "Ich wache um sieben Uhr auf.", "english": "I wake up at seven o'clock.", "category": "Routine" },
     { "german": "Ich stehe um halb acht auf.", "english": "I get up at half past seven.", "category": "Routine" },
@@ -182,7 +182,7 @@
     { "german": "Ich treffe mich mit meinen Freunden.", "english": "I meet up with my friends. (Accusative)", "category": "Routine" },
     { "german": "Ich ruhe mich nach der Arbeit aus.", "english": "I rest after work. (Accusative)", "category": "Routine" },
     { "german": "Ich entspanne mich auf dem Sofa.", "english": "I relax on the sofa. (Accusative)", "category": "Routine" },
-    { "german": "Ich lege mich ins Bett.", "english": "I lie down in bed. (Accusative)", "category": "Routine" }
+    { "german": "Ich lege mich ins Bett.", "english": "I lie down in bed. (Accusative)", "category": "Routine" },
 
     { "german": "Entschuldigung, wie komme ich zum Bahnhof?", "english": "Excuse me, how do I get to the train station?", "category": "Transport & Navigation" },
     { "german": "Der Zug hat leider 20 Minuten Verspätung.", "english": "Unfortunately, the train is 20 minutes delayed.", "category": "Transport & Navigation" },
@@ -191,7 +191,7 @@
     { "german": "Fährt dieser Bus ins Zentrum?", "english": "Does this bus go to the center?", "category": "Transport & Navigation" },
     { "german": "Gehen Sie geradeaus und dann die erste Straße links.", "english": "Go straight ahead and then take the first street on the left.", "category": "Transport & Navigation" },
     { "german": "Der nächste Zug fährt von Gleis 4 ab.", "english": "The next train departs from track 4.", "category": "Transport & Navigation" },
-    { "german": "Haben Sie Ihren Ausweis dabei?", "english": "Do you have your ID with you?", "category": "Transport & Navigation" }
+    { "german": "Haben Sie Ihren Ausweis dabei?", "english": "Do you have your ID with you?", "category": "Transport & Navigation" },
 
     { "german": "Wo finde ich das Obst und Gemüse?", "english": "Where can I find the fruit and vegetables?", "category": "Einkaufen" },
     { "german": "Ich hätte gerne 200 Gramm Käse, bitte.", "english": "I would like 200 grams of cheese, please.", "category": "Einkaufen" },
@@ -199,6 +199,6 @@
     { "german": "Kann ich mit Karte bezahlen?", "english": "Can I pay by card?", "category": "Einkaufen" },
     { "german": "Brauchen Sie den Kassenbon?", "english": "Do you need the receipt?", "category": "Einkaufen" },
     { "german": "Das ist diese Woche im Angebot.", "english": "That is on sale this week.", "category": "Einkaufen" },
-    { "german": "Ich habe leider kein Kleingeld.", "english": "Unfortunately, I don't have any change.", "category": "Einkaufen" }
+    { "german": "Ich habe leider kein Kleingeld.", "english": "Unfortunately, I don't have any change.", "category": "Einkaufen" },
   ]
 }
