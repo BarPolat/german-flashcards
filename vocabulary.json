@@ -1,11 +1,27 @@
 {
   "nouns": [
-    { "word": "Auto", "article": "das", "plural": "Autos", "english": "car", "category": "Transport" },
-    { "word": "Zug", "article": "der", "plural": "Züge", "english": "train", "category": "Transport" },
-    { "word": "Regen", "article": "der", "plural": "-", "english": "rain", "category": "Weather" }
+    { "word": "Erfahrung", "article": "die", "plural": "Erfahrungen", "english": "experience", "category": "Alltag" },
+    { "word": "Ziel", "article": "das", "plural": "Ziele", "english": "goal / destination", "category": "Alltag" },
+    { "word": "Entscheidung", "article": "die", "plural": "Entscheidungen", "english": "decision", "category": "Alltag" },
+    
+    { "word": "Vorlesung", "article": "die", "plural": "Vorlesungen", "english": "university lecture", "category": "Studium" },
+    { "word": "Forschung", "article": "die", "plural": "Forschungen", "english": "research", "category": "Studium" },
+    { "word": "Stipendium", "article": "das", "plural": "Stipendien", "english": "scholarship", "category": "Studium" },
+    
+    { "word": "Kraft", "article": "die", "plural": "Kräfte", "english": "force / power", "category": "Technik & Physik" },
+    { "word": "Drehmoment", "article": "das", "plural": "Drehmomente", "english": "torque", "category": "Technik & Physik" },
+    { "word": "Werkzeug", "article": "das", "plural": "Werkzeuge", "english": "tool", "category": "Technik & Physik" },
+    { "word": "Sensor", "article": "der", "plural": "Sensoren", "english": "sensor", "category": "Technik & Physik" },
+    
+    { "word": "Fahrzeug", "article": "das", "plural": "Fahrzeuge", "english": "vehicle", "category": "Mobilität" },
+    { "word": "Flugzeug", "article": "das", "plural": "Flugzeuge", "english": "airplane", "category": "Mobilität" },
+    { "word": "Antrieb", "article": "der", "plural": "Antriebe", "english": "drive / propulsion", "category": "Mobilität" }
   ],
   "phrases": [
-    { "german": "Wo ist der Bahnhof?", "english": "Where is the train station?", "category": "Transport" },
-    { "german": "Wie ist das Wetter heute?", "english": "How is the weather today?", "category": "Weather" }
+    { "german": "Ich möchte mich für den Masterstudiengang bewerben.", "english": "I would like to apply for the Master's program.", "category": "Studium" },
+    { "german": "Die Kraft wirkt in die negative x-Richtung.", "english": "The force acts in the negative x-direction.", "category": "Technik & Physik" },
+    { "german": "Das verteilte Drehmoment reicht von x=0 bis x=0.8.", "english": "The distributed torque goes from x=0 to x=0.8.", "category": "Technik & Physik" },
+    { "german": "Wir müssen die genauen Maße berechnen.", "english": "We need to calculate the exact dimensions.", "category": "Technik & Physik" },
+    { "german": "Gibt es hier in der Nähe ein gutes Restaurant?", "english": "Is there a good restaurant nearby?", "category": "Alltag" }
   ]
 }
