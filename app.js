@@ -1,5 +1,6 @@
 // State Variables
-let vocabulary = [];
+let allVocabulary = [];      // Holds everything
+let currentVocabulary = [];  // Holds just the selected unit
 let currentIndex = 0;
 let isFlipped = false;
 
@@ -10,74 +11,102 @@ const cardBack = document.getElementById('card-back');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const flipBtn = document.getElementById('flip-btn');
+const unitSelect = document.getElementById('unit-select'); // New dropdown
 
 // 1. Fetch the Vocabulary Data
 fetch('vocabulary.json')
     .then(response => response.json())
     .then(data => {
-        // Combine nouns and phrases into one main array
-        vocabulary = [...data.nouns, ...data.phrases];
-        updateCard(); // Load the first card
+        allVocabulary = [...data.nouns, ...data.phrases];
+        currentVocabulary = [...allVocabulary]; // Default to all cards
+        
+        populateDropdown();
+        updateCard();
     })
     .catch(error => {
-        cardFront.textContent = "Error loading vocabulary. Check your JSON format!";
+        cardFront.textContent = "Error loading vocabulary.";
         console.error(error);
     });
 
-// 2. Update the UI with the Current Card
-function updateCard() {
-    if (vocabulary.length === 0) return;
+// 2. Build the Dropdown Menu
+function populateDropdown() {
+    // Extract unique categories from the data, ignoring items without a category
+    const categories = [...new Set(allVocabulary.map(item => item.category).filter(Boolean))];
     
-    // Reset the flip state for the new card
+    // Add each category as an option in the dropdown
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        unitSelect.appendChild(option);
+    });
+}
+
+// 3. Update the UI with the Current Card
+function updateCard() {
+    if (currentVocabulary.length === 0) {
+        cardFront.textContent = "No cards in this unit.";
+        cardBack.innerHTML = "";
+        return;
+    }
+    
     isFlipped = false;
     card.classList.remove('flipped');
-    
-    // Clear previous color flags
     card.className = 'flashcard'; 
 
-    const currentItem = vocabulary[currentIndex];
+    const currentItem = currentVocabulary[currentIndex];
 
-    // Check if the item is a Noun or a Phrase based on our JSON structure
     if (currentItem.word) {
-        // It's a noun
         cardFront.textContent = currentItem.word;
         cardBack.innerHTML = `
             <div class="article">${currentItem.article} (pl: ${currentItem.plural})</div>
             <div class="english">${currentItem.english}</div>
         `;
-        // Apply the correct color flag based on the article
         card.classList.add(`gender-${currentItem.article.toLowerCase()}`);
     } else if (currentItem.german) {
-        // It's a phrase
         cardFront.textContent = currentItem.german;
         cardBack.innerHTML = `
             <div class="english">${currentItem.english}</div>
         `;
-        // Apply the purple phrase flag
         card.classList.add('type-phrase');
     }
 }
 
-// 3. Interaction Logic (Clicking and Buttons)
+// 4. Interaction Logic
 
 function toggleFlip() {
+    if (currentVocabulary.length === 0) return;
     isFlipped = !isFlipped;
     card.classList.toggle('flipped');
 }
 
-// Flip when clicking the button OR the card itself
 flipBtn.addEventListener('click', toggleFlip);
 card.addEventListener('click', toggleFlip);
 
 nextBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevents the card from flipping when clicking the button
-    currentIndex = (currentIndex + 1) % vocabulary.length; // Loops back to start
+    e.stopPropagation();
+    if (currentVocabulary.length === 0) return;
+    currentIndex = (currentIndex + 1) % currentVocabulary.length;
     updateCard();
 });
 
 prevBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    // Loops back to the end if going backwards from 0
-    currentIndex = (currentIndex - 1 + vocabulary.length) % vocabulary.length; 
+    if (currentVocabulary.length === 0) return;
+    currentIndex = (currentIndex - 1 + currentVocabulary.length) % currentVocabulary.length; 
+    updateCard();
+});
+
+// 5. Handle Dropdown Changes
+unitSelect.addEventListener('change', (e) => {
+    const selectedCategory = e.target.value;
+    
+    if (selectedCategory === 'all') {
+        currentVocabulary = [...allVocabulary];
+    } else {
+        currentVocabulary = allVocabulary.filter(item => item.category === selectedCategory);
+    }
+    
+    currentIndex = 0; // Go back to the first card of the new unit
     updateCard();
 });
