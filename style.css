@@ -128,3 +128,18 @@ button:active {
 #flip-btn:hover {
     background-color: #2471a3;
 }
+/* Category Selector Styling */
+.category-selector {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
