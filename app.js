@@ -12,18 +12,30 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const flipBtn = document.getElementById('flip-btn');
 const unitSelect = document.getElementById('unit-select');
+const reverseCheckbox = document.getElementById('reverse-mode'); // New Reverse Toggle
+
+// --- Helper: Shuffle Array (Fisher-Yates Algorithm) ---
+function shuffleArray(array) {
+    let shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
 
 // 1. Fetch the Vocabulary Data
 fetch('vocabulary.json')
     .then(response => response.json())
     .then(data => {
-        // Safely combine nouns, phrases, and verbs (even if one is empty)
         const nouns = data.nouns || [];
         const phrases = data.phrases || [];
         const verbs = data.verbs || [];
         
         allVocabulary = [...nouns, ...phrases, ...verbs];
-        currentVocabulary = [...allVocabulary];
+        
+        // Shuffle the initial deck immediately
+        currentVocabulary = shuffleArray(allVocabulary);
         
         populateDropdown();
         updateCard();
@@ -52,61 +64,100 @@ function updateCard() {
         return;
     }
     
-    isFlipped = false;
-    card.classList.remove('flipped');
-    card.className = 'flashcard'; 
+    // Check if Reverse Mode is active
+    const isReverse = reverseCheckbox.checked;
 
     const currentItem = currentVocabulary[currentIndex];
+    card.className = 'flashcard'; // Reset classes
 
     if (currentItem.word) {
-        // Noun Logic
-        cardFront.textContent = currentItem.word;
-        cardBack.innerHTML = `
-            <div class="article">${currentItem.article} (pl: ${currentItem.plural})</div>
-            <div class="english">${currentItem.english}</div>
-        `;
+        // --- NOUN LOGIC ---
+        if (isReverse) {
+            cardFront.textContent = currentItem.english;
+            cardBack.innerHTML = `
+                <div class="article" style="font-weight: bold; font-size: 1.5rem; color: #e0e0e0;">
+                    ${currentItem.article} ${currentItem.word}
+                </div>
+                <div class="english" style="margin-top: 5px;">(pl: ${currentItem.plural})</div>
+            `;
+        } else {
+            cardFront.textContent = currentItem.word;
+            cardBack.innerHTML = `
+                <div class="article">${currentItem.article} (pl: ${currentItem.plural})</div>
+                <div class="english">${currentItem.english}</div>
+            `;
+        }
         card.classList.add(`gender-${currentItem.article.toLowerCase()}`);
         
     } else if (currentItem.german) {
-        // Phrase Logic
-        cardFront.textContent = currentItem.german;
-        cardBack.innerHTML = `
-            <div class="english">${currentItem.english}</div>
-        `;
+        // --- PHRASE LOGIC ---
+        if (isReverse) {
+            cardFront.textContent = currentItem.english;
+            cardBack.innerHTML = `<div class="english" style="color: #e0e0e0; font-size: 1.3rem;">${currentItem.german}</div>`;
+        } else {
+            cardFront.textContent = currentItem.german;
+            cardBack.innerHTML = `<div class="english">${currentItem.english}</div>`;
+        }
         card.classList.add('type-phrase');
         
     } else if (currentItem.infinitive) {
-        // Verb Logic - Formatting the conjugations into a clean grid
-        cardFront.textContent = currentItem.infinitive;
-        cardBack.innerHTML = `
-            <div class="english" style="margin-bottom: 15px;">${currentItem.english}</div>
-            
-            <div style="font-size: 1rem; color: #aaaaaa; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; text-align: left; width: 80%;">
-                <div>ich ${currentItem.conjugation.ich}</div>
-                <div>wir ${currentItem.conjugation.wir}</div>
-                <div>du ${currentItem.conjugation.du}</div>
-                <div>ihr ${currentItem.conjugation.ihr}</div>
-                <div>er/sie/es ${currentItem.conjugation["er/sie/es"]}</div>
-                <div>sie/Sie ${currentItem.conjugation["sie/Sie"]}</div>
-            </div>
-            
-            <div style="font-size: 1rem; color: #888888; margin-top: 10px; font-style: italic;">
-                Perfekt: ${currentItem.conjugation.perfekt}
-            </div>
-            
-            <div class="english" style="margin-top: 15px; font-size: 1.1rem; color: #e0e0e0;">
-                "${currentItem.example}"
-            </div>
-        `;
+        // --- VERB LOGIC ---
+        if (isReverse) {
+            cardFront.textContent = currentItem.english;
+            cardBack.innerHTML = `
+                <div class="english" style="margin-bottom: 15px; font-weight: bold; color: #e0e0e0; font-size: 1.5rem;">${currentItem.infinitive}</div>
+                <div style="font-size: 1rem; color: #aaaaaa; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; text-align: left; width: 80%;">
+                    <div>ich ${currentItem.conjugation.ich}</div>
+                    <div>wir ${currentItem.conjugation.wir}</div>
+                    <div>du ${currentItem.conjugation.du}</div>
+                    <div>ihr ${currentItem.conjugation.ihr}</div>
+                    <div>er/sie/es ${currentItem.conjugation["er/sie/es"]}</div>
+                    <div>sie/Sie ${currentItem.conjugation["sie/Sie"]}</div>
+                </div>
+                <div class="english" style="margin-top: 15px; font-size: 1rem; color: #aaaaaa; font-style: italic;">
+                    "${currentItem.example}"
+                </div>
+            `;
+        } else {
+            cardFront.textContent = currentItem.infinitive;
+            cardBack.innerHTML = `
+                <div class="english" style="margin-bottom: 15px;">${currentItem.english}</div>
+                <div style="font-size: 1rem; color: #aaaaaa; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; text-align: left; width: 80%;">
+                    <div>ich ${currentItem.conjugation.ich}</div>
+                    <div>wir ${currentItem.conjugation.wir}</div>
+                    <div>du ${currentItem.conjugation.du}</div>
+                    <div>ihr ${currentItem.conjugation.ihr}</div>
+                    <div>er/sie/es ${currentItem.conjugation["er/sie/es"]}</div>
+                    <div>sie/Sie ${currentItem.conjugation["sie/Sie"]}</div>
+                </div>
+                <div style="font-size: 1rem; color: #888888; margin-top: 10px; font-style: italic;">
+                    Perfekt: ${currentItem.conjugation.perfekt}
+                </div>
+                <div class="english" style="margin-top: 15px; font-size: 1.1rem; color: #e0e0e0;">
+                    "${currentItem.example}"
+                </div>
+            `;
+        }
         card.classList.add('type-verb');
     }
 }
 
-// 4. Interaction Logic
+// 4. Interaction Logic & Bug Fixes
 function toggleFlip() {
     if (currentVocabulary.length === 0) return;
     isFlipped = !isFlipped;
     card.classList.toggle('flipped');
+}
+
+// --- Helper: Reset Card Animation Instantly ---
+function resetCardInstantly() {
+    if (isFlipped) {
+        card.classList.add('no-transition'); // Disable animation
+        card.classList.remove('flipped');    // Snap back to front
+        isFlipped = false;
+        void card.offsetWidth;               // Force the browser to register the snap
+        card.classList.remove('no-transition'); // Re-enable animation for the next flip
+    }
 }
 
 flipBtn.addEventListener('click', toggleFlip);
@@ -115,6 +166,7 @@ card.addEventListener('click', toggleFlip);
 nextBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     if (currentVocabulary.length === 0) return;
+    resetCardInstantly(); // Fixes the ghosting bug
     currentIndex = (currentIndex + 1) % currentVocabulary.length;
     updateCard();
 });
@@ -122,20 +174,30 @@ nextBtn.addEventListener('click', (e) => {
 prevBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     if (currentVocabulary.length === 0) return;
+    resetCardInstantly(); // Fixes the ghosting bug
     currentIndex = (currentIndex - 1 + currentVocabulary.length) % currentVocabulary.length; 
     updateCard();
 });
 
-// 5. Handle Dropdown Changes
+// 5. Handle Settings Changes (Dropdown & Reverse Mode)
 unitSelect.addEventListener('change', (e) => {
+    resetCardInstantly();
     const selectedCategory = e.target.value;
     
     if (selectedCategory === 'all') {
-        currentVocabulary = [...allVocabulary];
+        // Shuffle the whole deck
+        currentVocabulary = shuffleArray(allVocabulary);
     } else {
-        currentVocabulary = allVocabulary.filter(item => item.category === selectedCategory);
+        // Filter and shuffle the specific category
+        const filtered = allVocabulary.filter(item => item.category === selectedCategory);
+        currentVocabulary = shuffleArray(filtered);
     }
     
     currentIndex = 0;
     updateCard();
+});
+
+reverseCheckbox.addEventListener('change', () => {
+    resetCardInstantly();
+    updateCard(); // Re-render the current card in the new mode
 });
