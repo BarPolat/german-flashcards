@@ -12,7 +12,7 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const flipBtn = document.getElementById('flip-btn');
 const unitSelect = document.getElementById('unit-select');
-const reverseCheckbox = document.getElementById('reverse-mode'); // New Reverse Toggle
+const reverseCheckbox = document.getElementById('reverse-mode');
 
 // --- Helper: Shuffle Array (Fisher-Yates Algorithm) ---
 function shuffleArray(array) {
@@ -41,7 +41,7 @@ fetch('vocabulary.json')
         updateCard();
     })
     .catch(error => {
-        cardFront.textContent = "Error loading vocabulary. Check JSON formatting!";
+        cardFront.textContent = "Error loading vocabulary.";
         console.error(error);
     });
 
@@ -64,11 +64,12 @@ function updateCard() {
         return;
     }
     
-    // Check if Reverse Mode is active
     const isReverse = reverseCheckbox.checked;
-
     const currentItem = currentVocabulary[currentIndex];
-    card.className = 'flashcard'; // Reset classes
+
+    // Safely reset states without deleting the 'no-transition' freeze command
+    isFlipped = false;
+    card.classList.remove('flipped', 'gender-der', 'gender-die', 'gender-das', 'type-phrase', 'type-verb');
 
     if (currentItem.word) {
         // --- NOUN LOGIC ---
@@ -143,21 +144,37 @@ function updateCard() {
 }
 
 // 4. Interaction Logic & Bug Fixes
+
 function toggleFlip() {
     if (currentVocabulary.length === 0) return;
     isFlipped = !isFlipped;
     card.classList.toggle('flipped');
 }
 
-// --- Helper: Reset Card Animation Instantly ---
-function resetCardInstantly() {
-    if (isFlipped) {
-        card.classList.add('no-transition'); // Disable animation
-        card.classList.remove('flipped');    // Snap back to front
-        isFlipped = false;
-        void card.offsetWidth;               // Force the browser to register the snap
-        card.classList.remove('no-transition'); // Re-enable animation for the next flip
+// --- The Bulletproof Instant Change Function ---
+function changeCardInstantly(direction) {
+    if (currentVocabulary.length === 0) return;
+    
+    // 1. Freeze the animation
+    card.classList.add('no-transition');
+    
+    // 2. Change the index
+    if (direction === 'next') {
+        currentIndex = (currentIndex + 1) % currentVocabulary.length;
+    } else {
+        currentIndex = (currentIndex - 1 + currentVocabulary.length) % currentVocabulary.length;
     }
+    
+    // 3. Update the text (this also removes the 'flipped' class)
+    updateCard();
+    
+    // 4. Force the browser to draw the card right now
+    void card.offsetWidth;
+    
+    // 5. Turn animations back on a tiny millisecond later so the flip works next time
+    setTimeout(() => {
+        card.classList.remove('no-transition');
+    }, 50);
 }
 
 flipBtn.addEventListener('click', toggleFlip);
@@ -165,39 +182,29 @@ card.addEventListener('click', toggleFlip);
 
 nextBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (currentVocabulary.length === 0) return;
-    resetCardInstantly(); // Fixes the ghosting bug
-    currentIndex = (currentIndex + 1) % currentVocabulary.length;
-    updateCard();
+    changeCardInstantly('next');
 });
 
 prevBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (currentVocabulary.length === 0) return;
-    resetCardInstantly(); // Fixes the ghosting bug
-    currentIndex = (currentIndex - 1 + currentVocabulary.length) % currentVocabulary.length; 
-    updateCard();
+    changeCardInstantly('prev');
 });
 
 // 5. Handle Settings Changes (Dropdown & Reverse Mode)
 unitSelect.addEventListener('change', (e) => {
-    resetCardInstantly();
     const selectedCategory = e.target.value;
     
     if (selectedCategory === 'all') {
-        // Shuffle the whole deck
         currentVocabulary = shuffleArray(allVocabulary);
     } else {
-        // Filter and shuffle the specific category
         const filtered = allVocabulary.filter(item => item.category === selectedCategory);
         currentVocabulary = shuffleArray(filtered);
     }
     
     currentIndex = 0;
-    updateCard();
+    changeCardInstantly('stay'); // Instantly reset to the first card of the new category
 });
 
 reverseCheckbox.addEventListener('change', () => {
-    resetCardInstantly();
-    updateCard(); // Re-render the current card in the new mode
+    changeCardInstantly('stay'); // Instantly update the current card to the new mode
 });
