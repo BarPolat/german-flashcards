@@ -1,11 +1,11 @@
 {
   "nouns": [
-    { "word": "Auto", "article": "das", "plural": "Autos", "english": "car" },
-    { "word": "Stadt", "article": "die", "plural": "Städte", "english": "city" },
-    { "word": "Zug", "article": "der", "plural": "Züge", "english": "train" }
+    { "word": "Auto", "article": "das", "plural": "Autos", "english": "car", "category": "Transport" },
+    { "word": "Zug", "article": "der", "plural": "Züge", "english": "train", "category": "Transport" },
+    { "word": "Regen", "article": "der", "plural": "-", "english": "rain", "category": "Weather" }
   ],
   "phrases": [
-    { "german": "Wie geht es dir?", "english": "How are you? (informal)" },
-    { "german": "Ich hätte gerne einen Kaffee.", "english": "I would like a coffee." }
+    { "german": "Wo ist der Bahnhof?", "english": "Where is the train station?", "category": "Transport" },
+    { "german": "Wie ist das Wetter heute?", "english": "How is the weather today?", "category": "Weather" }
   ]
 }
