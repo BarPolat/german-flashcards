@@ -92,6 +92,7 @@ h1 {
 .gender-die { border-top: 8px solid #e74c3c; } 
 .gender-das { border-top: 8px solid #2ecc71; } 
 .type-phrase { border-top: 8px solid #9b59b6; } 
+.type-verb { border-top: 8px solid #f39c12; }
 
 /* Button Controls */
 .controls {
