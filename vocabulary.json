@@ -154,7 +154,7 @@
     { "word": "Obst", "article": "das", "plural": "-", "english": "fruit", "category": "Einkaufen" },
     { "word": "Gemüse", "article": "das", "plural": "-", "english": "vegetables", "category": "Einkaufen" },
     { "word": "Fleisch", "article": "das", "plural": "-", "english": "meat", "category": "Einkaufen" },
-    { "word": "Käse", "article": "der", "plural": "Käse", "english": "cheese", "category": "Einkaufen" },
+    { "word": "Käse", "article": "der", "plural": "Käse", "english": "cheese", "category": "Einkaufen" }
 
     
   ],
@@ -199,6 +199,6 @@
     { "german": "Kann ich mit Karte bezahlen?", "english": "Can I pay by card?", "category": "Einkaufen" },
     { "german": "Brauchen Sie den Kassenbon?", "english": "Do you need the receipt?", "category": "Einkaufen" },
     { "german": "Das ist diese Woche im Angebot.", "english": "That is on sale this week.", "category": "Einkaufen" },
-    { "german": "Ich habe leider kein Kleingeld.", "english": "Unfortunately, I don't have any change.", "category": "Einkaufen" },
+    { "german": "Ich habe leider kein Kleingeld.", "english": "Unfortunately, I don't have any change.", "category": "Einkaufen" }
   ]
 }
