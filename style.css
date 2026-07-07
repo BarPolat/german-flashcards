@@ -1,0 +1,130 @@
+/* Base Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Flashcard 3D Environment */
+.flashcard {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px; /* Gives the 3D depth effect */
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* Common Styles for Both Sides of the Card */
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Animation settings */
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden; /* Hides the backside when rotated */
+}
+
+/* Specific Side Styling & Rotations */
+.front {
+    transform: rotateY(0deg);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.back {
+    transform: rotateY(180deg); /* Starts flipped around */
+    background-color: #fdfdfd;
+}
+
+.back .article {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.back .english {
+    font-size: 1.2rem;
+    color: #2980b9;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* The Flipped State (Triggered by JavaScript) */
+.flashcard.flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.flashcard.flipped .back {
+    transform: rotateY(0deg);
+}
+
+/* Article Color Indicators (For Visual Memory) */
+.gender-der { border-top: 8px solid #3498db; } /* Blue for masculine */
+.gender-die { border-top: 8px solid #e74c3c; } /* Red for feminine */
+.gender-das { border-top: 8px solid #2ecc71; } /* Green for neuter */
+.type-phrase { border-top: 8px solid #9b59b6; } /* Purple for phrases */
+
+/* Button Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex: 1;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#flip-btn {
+    background-color: #2980b9;
+    font-weight: bold;
+}
+
+#flip-btn:hover {
+    background-color: #2471a3;
+}
