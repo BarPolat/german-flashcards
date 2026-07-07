@@ -259,7 +259,7 @@
     { "german": "programmieren", "english": "to program", "category": "Verben" },
     { "german": "lösen", "english": "to solve", "category": "Verben" },
     { "german": "bauen", "english": "to build", "category": "Verben" },
-    { "german": "planen", "english": "to plan", "category": "Verben" }
+    { "german": "planen", "english": "to plan", "category": "Verben" },
     
     { "german": "Ich möchte mich für den Masterstudiengang bewerben.", "english": "I would like to apply for the Master's program.", "category": "Studium" },
     { "german": "Die Kraft wirkt in die negative x-Richtung.", "english": "The force acts in the negative x-direction.", "category": "Technik & Physik" },
