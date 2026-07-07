@@ -1,0 +1,11 @@
+{
+  "nouns": [
+    { "word": "Auto", "article": "das", "plural": "Autos", "english": "car" },
+    { "word": "Stadt", "article": "die", "plural": "Städte", "english": "city" },
+    { "word": "Zug", "article": "der", "plural": "Züge", "english": "train" }
+  ],
+  "phrases": [
+    { "german": "Wie geht es dir?", "english": "How are you? (informal)" },
+    { "german": "Ich hätte gerne einen Kaffee.", "english": "I would like a coffee." }
+  ]
+}
