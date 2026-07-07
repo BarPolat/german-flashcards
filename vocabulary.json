@@ -201,7 +201,7 @@
     { "german": "Brauchen Sie den Kassenbon?", "english": "Do you need the receipt?", "category": "Einkaufen" },
     { "german": "Das ist diese Woche im Angebot.", "english": "That is on sale this week.", "category": "Einkaufen" },
     { "german": "Ich habe leider kein Kleingeld.", "english": "Unfortunately, I don't have any change.", "category": "Einkaufen" }
-  ]
+  ],
 
 "verbs": [
     {
