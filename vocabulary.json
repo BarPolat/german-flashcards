@@ -278,7 +278,464 @@
         "perfekt": "bin geflogen"
       },
       "example": "Das Flugzeug fliegt in großer Höhe."
-    }
-  ]
+    },
+
+  {
+      "infinitive": "entwickeln",
+      "english": "to develop",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "entwickle",
+        "du": "entwickelst",
+        "er/sie/es": "entwickelt",
+        "wir": "entwickeln",
+        "ihr": "entwickelt",
+        "sie/Sie": "entwickeln",
+        "perfekt": "habe entwickelt"
+      },
+      "example": "Wir entwickeln eine neue Sensorik für das System."
+    },
+    {
+      "infinitive": "studieren",
+      "english": "to study (at university)",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "studiere",
+        "du": "studierst",
+        "er/sie/es": "studiert",
+        "wir": "studieren",
+        "ihr": "studiert",
+        "sie/Sie": "studieren",
+        "perfekt": "habe studiert"
+      },
+      "example": "Ich studiere Maschinenbau im zweiten Jahr."
+    },
+    {
+      "infinitive": "verstehen",
+      "english": "to understand",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "verstehe",
+        "du": "verstehst",
+        "er/sie/es": "versteht",
+        "wir": "verstehen",
+        "ihr": "versteht",
+        "sie/Sie": "verstehen",
+        "perfekt": "habe verstanden"
+      },
+      "example": "Ich verstehe die mathematische Grundlage gut."
+    },
+    {
+      "infinitive": "bauen",
+      "english": "to build",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "baue",
+        "du": "baust",
+        "er/sie/es": "baut",
+        "wir": "bauen",
+        "ihr": "baut",
+        "sie/Sie": "bauen",
+        "perfekt": "habe gebaut"
+      },
+      "example": "Wir bauen die Struktur für die Teknofest-Rakete."
+    },
+    {
+      "infinitive": "messen",
+      "english": "to measure",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "messe",
+        "du": "misst",
+        "er/sie/es": "misst",
+        "wir": "messen",
+        "ihr": "messt",
+        "sie/Sie": "messen",
+        "perfekt": "habe gemessen"
+      },
+      "example": "Der Encoder misst die genaue Position."
+    },
+
+  {
+      "infinitive": "machen",
+      "english": "to make / to do",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "mache",
+        "du": "machst",
+        "er/sie/es": "macht",
+        "wir": "machen",
+        "ihr": "macht",
+        "sie/Sie": "machen",
+        "perfekt": "habe gemacht"
+      },
+      "example": "Was machst du heute Abend?"
+    },
+    {
+      "infinitive": "gehen",
+      "english": "to go / to walk",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er/sie/es": "geht",
+        "wir": "gehen",
+        "ihr": "geht",
+        "sie/Sie": "gehen",
+        "perfekt": "bin gegangen"
+      },
+      "example": "Wir gehen am Wochenende in die Stadt."
+    },
+    {
+      "infinitive": "sehen",
+      "english": "to see",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "sehe",
+        "du": "siehst",
+        "er/sie/es": "sieht",
+        "wir": "sehen",
+        "ihr": "seht",
+        "sie/Sie": "sehen",
+        "perfekt": "habe gesehen"
+      },
+      "example": "Ich sehe den Zug auf dem Gleis stehen."
+    },
+    {
+      "infinitive": "wissen",
+      "english": "to know (a fact)",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "weiß",
+        "du": "weißt",
+        "er/sie/es": "weiß",
+        "wir": "wissen",
+        "ihr": "wisst",
+        "sie/Sie": "wissen",
+        "perfekt": "habe gewusst"
+      },
+      "example": "Weißt du, wie spät es ist?"
+    },
+    {
+      "infinitive": "kommen",
+      "english": "to come",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "komme",
+        "du": "kommst",
+        "er/sie/es": "kommt",
+        "wir": "kommen",
+        "ihr": "kommt",
+        "sie/Sie": "kommen",
+        "perfekt": "bin gekommen"
+      },
+      "example": "Wann kommst du nach Hause?"
+    },
+
+  {
+      "infinitive": "einladen",
+      "english": "to invite",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "lade ein",
+        "du": "lädst ein",
+        "er/sie/es": "lädt ein",
+        "wir": "laden ein",
+        "ihr": "ladet ein",
+        "sie/Sie": "laden ein",
+        "perfekt": "habe eingeladen"
+      },
+      "example": "Ich lade meine Freunde zum Essen ein."
+    },
+    {
+      "infinitive": "gefallen",
+      "english": "to please / to like",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "gefalle",
+        "du": "gefällst",
+        "er/sie/es": "gefällt",
+        "wir": "gefallen",
+        "ihr": "gefallt",
+        "sie/Sie": "gefallen",
+        "perfekt": "hat gefallen"
+      },
+      "example": "Die neue Wohnung gefällt mir sehr gut."
+    },
+    {
+      "infinitive": "passieren",
+      "english": "to happen",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "passiere",
+        "du": "passierst",
+        "er/sie/es": "passiert",
+        "wir": "passieren",
+        "ihr": "passiert",
+        "sie/Sie": "passieren",
+        "perfekt": "ist passiert"
+      },
+      "example": "Weißt du, was gestern Abend passiert ist?"
+    },
+    {
+      "infinitive": "verdienen",
+      "english": "to earn / to deserve",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "verdiene",
+        "du": "verdienst",
+        "er/sie/es": "verdient",
+        "wir": "verdienen",
+        "ihr": "verdient",
+        "sie/Sie": "verdienen",
+        "perfekt": "habe verdient"
+      },
+      "example": "Als Maschinenbauingenieur verdient man ein gutes Gehalt."
+    },
+    {
+      "infinitive": "vergessen",
+      "english": "to forget",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "vergesse",
+        "du": "vergisst",
+        "er/sie/es": "vergisst",
+        "wir": "vergessen",
+        "ihr": "vergesst",
+        "sie/Sie": "vergessen",
+        "perfekt": "habe vergessen"
+      },
+      "example": "Ich habe leider meinen Schlüssel zu Hause vergessen."
+    },
+
+  {
+      "infinitive": "anbieten",
+      "english": "to offer",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "biete an",
+        "du": "bietest an",
+        "er/sie/es": "bietet an",
+        "wir": "bieten an",
+        "ihr": "bietet an",
+        "sie/Sie": "bieten an",
+        "perfekt": "habe angeboten"
+      },
+      "example": "Die Universität bietet viele interessante Masterstudiengänge an."
+    },
+    {
+      "infinitive": "empfehlen",
+      "english": "to recommend",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "empfehle",
+        "du": "empfiehlst",
+        "er/sie/es": "empfiehlt",
+        "wir": "empfehlen",
+        "ihr": "empfehlt",
+        "sie/Sie": "empfehlen",
+        "perfekt": "habe empfohlen"
+      },
+      "example": "Können Sie ein gutes Restaurant in Lissabon empfehlen?"
+    },
+    {
+      "infinitive": "teilnehmen",
+      "english": "to participate / to take part",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "nehme teil",
+        "du": "nimmst teil",
+        "er/sie/es": "nimmt teil",
+        "wir": "nehmen teil",
+        "ihr": "nehmt teil",
+        "sie/Sie": "nehmen teil",
+        "perfekt": "habe teilgenommen"
+      },
+      "example": "Wir nehmen dieses Jahr mit unserem Team am Teknofest teil."
+    },
+    {
+      "infinitive": "umziehen",
+      "english": "to move (residence)",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "ziehe um",
+        "du": "ziehst um",
+        "er/sie/es": "zieht um",
+        "wir": "ziehen um",
+        "ihr": "zieht um",
+        "sie/Sie": "ziehen um",
+        "perfekt": "bin umgezogen"
+      },
+      "example": "Ich bin letzten Monat in eine neue WG umgezogen."
+    },
+    {
+      "infinitive": "vorbereiten",
+      "english": "to prepare",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "bereite vor",
+        "du": "bereitest vor",
+        "er/sie/es": "bereitet vor",
+        "wir": "bereiten vor",
+        "ihr": "bereitet vor",
+        "sie/Sie": "bereiten vor",
+        "perfekt": "habe vorbereitet"
+      },
+      "example": "Ich bereite mich jeden Tag auf mein Praktikum vor."
+    },
+
+{
+      "infinitive": "anrufen",
+      "english": "to call (on the phone)",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "rufe an",
+        "du": "rufst an",
+        "er/sie/es": "ruft an",
+        "wir": "rufen an",
+        "ihr": "ruft an",
+        "sie/Sie": "rufen an",
+        "perfekt": "habe angerufen"
+      },
+      "example": "Ich rufe dich heute Abend an."
+    },
+    {
+      "infinitive": "bestellen",
+      "english": "to order",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "bestelle",
+        "du": "bestellst",
+        "er/sie/es": "bestellt",
+        "wir": "bestellen",
+        "ihr": "bestellt",
+        "sie/Sie": "bestellen",
+        "perfekt": "habe bestellt"
+      },
+      "example": "Wir bestellen oft Pizza zum Abendessen."
+    },
+    {
+      "infinitive": "erklären",
+      "english": "to explain",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "erkläre",
+        "du": "erklärst",
+        "er/sie/es": "erklärt",
+        "wir": "erklären",
+        "ihr": "erklärt",
+        "sie/Sie": "erklären",
+        "perfekt": "habe erklärt"
+      },
+      "example": "Der Professor erklärt das Konzept sehr gut."
+    },
+    {
+      "infinitive": "gehören",
+      "english": "to belong to",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "gehöre",
+        "du": "gehörst",
+        "er/sie/es": "gehört",
+        "wir": "gehören",
+        "ihr": "gehört",
+        "sie/Sie": "gehören",
+        "perfekt": "hat gehört"
+      },
+      "example": "Dieser Rucksack gehört mir."
+    },
+    {
+      "infinitive": "kennenlernen",
+      "english": "to get to know",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "lerne kennen",
+        "du": "lernst kennen",
+        "er/sie/es": "lernt kennen",
+        "wir": "lernen kennen",
+        "ihr": "lernt kennen",
+        "sie/Sie": "lernen kennen",
+        "perfekt": "habe kennengelernt"
+      },
+      "example": "Ich möchte an der Uni neue Leute kennenlernen."
+    },
+    {
+      "infinitive": "mitbringen",
+      "english": "to bring along",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "bringe mit",
+        "du": "bringst mit",
+        "er/sie/es": "bringt mit",
+        "wir": "bringen mit",
+        "ihr": "bringt mit",
+        "sie/Sie": "bringen mit",
+        "perfekt": "habe mitgebracht"
+      },
+      "example": "Ich bringe Snacks für die Lerngruppe mit."
+    },
+    {
+      "infinitive": "stattfinden",
+      "english": "to take place",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "finde statt",
+        "du": "findest statt",
+        "er/sie/es": "findet statt",
+        "wir": "finden statt",
+        "ihr": "findet statt",
+        "sie/Sie": "finden statt",
+        "perfekt": "hat stattgefunden"
+      },
+      "example": "Die Vorlesung findet am Montagmorgen statt."
+    },
+    {
+      "infinitive": "überweisen",
+      "english": "to transfer (money)",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "überweise",
+        "du": "überweist",
+        "er/sie/es": "überweist",
+        "wir": "überweisen",
+        "ihr": "überweist",
+        "sie/Sie": "überweisen",
+        "perfekt": "habe überwiesen"
+      },
+      "example": "Ich habe die Miete für diesen Monat pünktlich überwiesen."
+    },
+    {
+      "infinitive": "vergleichen",
+      "english": "to compare",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "vergleiche",
+        "du": "vergleichst",
+        "er/sie/es": "vergleicht",
+        "wir": "vergleichen",
+        "ihr": "vergleicht",
+        "sie/Sie": "vergleichen",
+        "perfekt": "habe verglichen"
+      },
+      "example": "Wir müssen die Ergebnisse der Simulation vergleichen."
+    },
+    {
+      "infinitive": "zuhören",
+      "english": "to listen to",
+      "category": "Verben",
+      "conjugation": {
+        "ich": "höre zu",
+        "du": "hörst zu",
+        "er/sie/es": "hört zu",
+        "wir": "hören zu",
+        "ihr": "hört zu",
+        "sie/Sie": "hören zu",
+        "perfekt": "habe zugehört"
+      },
+      "example": "Die Studenten hören dem Vortrag aufmerksam zu."
+    },
+
+  
+]
   
 }
